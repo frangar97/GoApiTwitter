@@ -42,7 +42,7 @@ func Registro(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	if status == false {
+	if !status {
 		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
